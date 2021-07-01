@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let parent = document.body;
+        let gf = document.createElement("h1");
+        gf.textContent="Hamza Khan";
+        gf.id="ham"
+        parent.appendChild(gf);
+
+        let gr = document.createElement("p");
+        gr.textContent="Java Script is the one of the main Language of web";
+        let hg = parent.firstElementChild;
+        parent.insertBefore(gr,hg);
+
+        let o = document.getElementById("ham");
+         let hj = document.createElement("h2");
+        hj.textContent="Python";
+        hj.id ="pyt";
+        parent.insertBefore(hj,o);
+
+        let html ="Python is the main Programming  Language of General purpose";
+        html.id="oio";
+        o.insertAdjacentHTML('beforebegin', html);
+
+        let pp = document.body;
+        let htm = "Hacking is one of the Different scope of Program";
+        pp.insertAdjacentHTML('afterend', htm);
+
+        pp.style.background="green"
+
+        let yy =gf.cloneNode(true);
+        yy.id ="double";
+        document.body.appendChild(yy);
+        yy.style.padding="15px"
+        yy.cursor="pointer";
+
+        let uu = document.createElement("input");
+        uu.id ="int";
+        document.body.appendChild(uu);
+        
+        let oiu = document.createElement("h1")
+        oiu.textContent="This is a Pracrtice Time";
+        let pl = document.getElementById("double");
+        pl.appendChild(oiu);
+        oiu.style.color="skyblue";
+        oiu.style.margin="-1px";
+        oiu.style.background="black"
+
+        let plk = document.getElementById("ham");
+        plk.style.cursor="pointer"
+        plk.onclick=function(){
+            let n= parseInt(prompt("Enter NUmber"));
+            for(let i=0; i<=10; i++){
+           document.write   (`${n}*${i}=${n*i} <br>`)}  
+        };
+
+
+        let uio = document.getElementById("pyt");
+ 
+       uio.onclick= function(){
+            const number = parseInt(prompt('Enter the number of terms: '));
+        let n1 = 0, n2 = 1, nextTerm;
+        
+         document.write('Fibonacci Series:'+ "<h1>");
+        for (let i = 1; i <= number; i++) {
+            document.write(n1+"<br>");
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+    }
+
+    </script>
+ </body>
+</html>
